@@ -71,7 +71,7 @@ function draw() {
   text("Score: "+ score, 500,50);
   if(gameState===play){
      score = score + Math.round(getFrameRate()/60);
-  
+     
   
   if(keyDown("space")) {
     trex.velocityY = -10;
@@ -89,6 +89,9 @@ function draw() {
     dieS.play()
     
   }
+    if(score/100===0){
+      checkS.play()
+    }
   }
   
 else if(gameState===end){
